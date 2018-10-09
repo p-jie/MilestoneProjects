@@ -48,6 +48,7 @@ public class BaseActivity extends AppCompatActivity implements Presenter, Gestur
     public static JackBaseApplication app = JackBaseApplication.getInstance();
     protected AppACache mAppCache;
     private ViewDataBinding baseBinding;
+    private static final boolean isFullScreen = true;
     private static final String TAG = "BaseActivity";
 
     /**
@@ -92,6 +93,7 @@ public class BaseActivity extends AppCompatActivity implements Presenter, Gestur
         threadNameList = new ArrayList<String>();
 
         BaseBroadcastReceiver.register(context, receiver, ACTION_EXIT_APP);
+
 
         app.pushActivity(this);
     }
